@@ -1,0 +1,30 @@
+.home-component-about {
+    width: 100%;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    padding: 100px;
+    
+    box-sizing: border-box;
+  }
+  .home-component-about-image-img {
+    height: 500px;
+  }
+  .home-component-about-div {
+    /* width: 400px; */
+    margin-left: 100px;
+    
+  }
+  .home-component-about-div-title {
+    font-family: "Poppins", sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: #d62828;
+    
+  }
+  .home-component-about-div-text {
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    letter-spacing: 1px;
+    line-height: 32px;
+  }

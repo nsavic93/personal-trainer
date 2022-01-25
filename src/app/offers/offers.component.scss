@@ -1,0 +1,50 @@
+.offers-component {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 10%;
+  padding-top: 50px;
+}
+.offers-component-item-wrapper {
+  width: 50%;
+  box-sizing: border-box;
+  padding: 5px;
+}
+.offers-item {
+  height: 130px;
+  width: 100%;
+  border: 1px solid #e9d8a6;
+  border-radius: 5px;
+  display: flex;
+}
+.offers-item-image {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.offers-item-offer {
+  width: 70%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+}
+.offers-item-offer h3 {
+  font-family: "Poppins", sans-serif;
+  color: #d62828;
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 0;
+}
+.offers-item-offer p {
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    letter-spacing: 1px;
+    // line-height: 18px;
+}
+.offers-icon {
+  font-size: 60px;
+  color: #90e0ef;
+}
