@@ -2,26 +2,79 @@
 <i class="fa-volume-up"></i>
 <fa-icon [icon]="faVolumeUp"></fa-icon> -->
 <div class="app-component">
-  <div class="nav-bar">
+  <div class="nav-mobile">
+    <div class="nav-bar-logo">
+      <img [src]="logo" alt="logo" class="nav-bar-logo-img" />
+    </div>
+    <h1>Aleksandar Z.</h1>
+    <fa-icon
+      [icon]="faBars"
+      class="nav-icon"
+      (click)="openMobileNav()"
+    ></fa-icon>
+  </div>
+
+  <div class="nav-bar nav-fullscreen">
     <div class="nav-bar-logo">
       <img [src]="logo" alt="logo" class="nav-bar-logo-img" />
     </div>
     <div class="nav-bar-items">
       <a routerLink="/home">Home</a>
-      <a routerLink="/home">Nesto</a>
-      <a routerLink="/home">Drugo</a>
+      <a routerLink="/services">Services</a>
+      <a routerLink="/about">About</a>
+      <a routerLink="/contact">Contact</a>
     </div>
     <div class="nav-bar-links">
       <div class="nav-bar-links-item">
-        <fa-icon [icon]="faInstagram" class="nav-bar-links-item-icon"></fa-icon>
+        <a class="nav-bar-links-item-icon" href="https://www.instagram.com/coachzecevic/"
+          ><i class="fa fa-instagram"></i
+        ></a>
       </div>
       <div class="nav-bar-links-item">
-        <fa-icon [icon]="faFacebook" class="nav-bar-links-item-icon"></fa-icon>
+        <a class="nav-bar-links-item-icon" href="https://www.facebook.com/profile.php?id=100016636787963">
+          <i class="fa fa-facebook-square"></i>
+      </a>
       </div>
       <div class="nav-bar-links-item">
-        <fa-icon [icon]="faTikTok" class="nav-bar-links-item-icon"></fa-icon>
+        <a class="nav-bar-links-item-icon" href="https://www.tiktok.com/@coachzecevic"
+        >
+        <i class="fa-brands fa-tiktok"></i>
+        <!-- <i class="fa fa-facebook-square"></i> -->
+      </a>
       </div>
     </div>
   </div>
   <router-outlet></router-outlet>
+</div>
+<div class="mobile-navigation" *ngIf="mobileNav">
+  <fa-icon
+    [icon]="faTimesCircle"
+    class="nav-icon-close"
+    (click)="closeMobileNav()"
+  ></fa-icon>
+  <div class="mobile-nav">
+    <div class="mobile-nav-bar-items">
+      <a routerLink="/home">Home</a>
+      <a routerLink="/services">Services</a>
+      <a routerLink="/about">About</a>
+      <a routerLink="/contact">Contact</a>
+    </div>
+    <div class="mobile-nav-bar-links">
+      <div class="nav-bar-links-item">
+        <a class="nav-bar-links-item-icon" href="https://www.instagram.com/coachzecevic/"
+          ><i class="fa fa-instagram"></i
+        ></a>
+      </div>
+      <div class="nav-bar-links-item">
+        <a class="nav-bar-links-item-icon" href="https://www.facebook.com/profile.php?id=100016636787963">
+          <i class="fa fa-facebook-square"></i>
+      </a>
+      </div>
+      <div class="nav-bar-links-item">
+        <a class="nav-bar-links-item-icon" href="https://www.tiktok.com/@coachzecevic"
+        ><i class="fa fa-facebook-square"></i>
+      </a>
+      </div>
+    </div>
+  </div>
 </div>
