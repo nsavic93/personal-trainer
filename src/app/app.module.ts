@@ -16,12 +16,15 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { ContactComponent } from './contact/contact.component';
 import { IndividualTrainingComponent } from './individual-training/individual-training.component';
+import { LoginComponent } from './components/login/login.component';
+import { FormsModule } from '@angular/forms';
+import { LoginService } from './_services/login.service';
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
 }
 @NgModule({
   declarations: [
-    AppComponent, HomeComponent , About , Offers, AboutComponent, ServicesComponent, ContactComponent, IndividualTrainingComponent
+    AppComponent, HomeComponent , About , Offers, AboutComponent, ServicesComponent, ContactComponent, IndividualTrainingComponent, LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -30,6 +33,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     MatButtonModule,
     FontAwesomeModule,
     HttpClientModule ,
+    FormsModule,
     TranslateModule.forRoot({
       defaultLanguage: 'en',
       loader: {
@@ -39,7 +43,7 @@ export function HttpLoaderFactory(http: HttpClient) {
       },
     }),
   ],
-  providers: [],
+  providers: [LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
