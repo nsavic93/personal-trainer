@@ -1,6 +1,5 @@
-.about-page {
+.about-page {}
 
-}
 .about-title {
     width: 100%;
     display: flex;
@@ -9,20 +8,23 @@
     height: 150px;
     align-items: center;
 }
+
 .about-title-h1 {
     font-family: "Poppins", sans-serif;
     color: white;
     font-size: 36px;
     font-weight: bolder;
 }
-.about-page-img-row{
+
+.about-page-img-row {
     width: 100%;
     display: flex;
     justify-content: center;
     position: relative;
     top: -70px;
 }
-.about-page-image-div{
+
+.about-page-image-div {
     height: 140px;
     width: 140px;
     background-color: white;
@@ -34,6 +36,7 @@
     border-radius: 50%;
     padding: 5px;
 }
+
 .about-page-image-wrapper {
     // background-color: white;
     width: 140px;
@@ -43,11 +46,13 @@
     display: flex;
     justify-content: center;
 }
-.about-page-name-row{
+
+.about-page-name-row {
     width: 100%;
     display: flex;
     justify-content: center;
-    h1{
+
+    h1 {
         font-size: 38px;
         color: #444444;
         margin-top: 0;
@@ -56,39 +61,88 @@
         font-weight: 900;
     }
 }
-.about-page-description-row{
+
+.about-page-description-row {
     display: flex;
     justify-content: center;
     width: 100%;
     flex-direction: column;
     align-items: center;
-    h3{
+
+    h3 {
         color: #888888;
     }
-    p{
+
+    p {
         text-align: center;
         width: 70%;
     }
 }
-.about-page-images-row{
+
+.about-page-images-row {
     padding-top: 40px;
     padding-bottom: 40px;
     width: 100%;
     display: flex;
     justify-content: center;
 }
-.images-wrapper{
+
+.images-wrapper {
     width: 70%;
     display: flex;
     justify-content: space-between;
 }
-.image-div{
+
+.image-div {
     width: 24%;
     height: 200px;
     // background-color: red;
-    
+
     background-size: cover;
-    img{
+
+    img {
         width: 100%;
     }
+}
+
+.about-page-biography-row {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+
+    .about-page-collumn {
+        width: 35%;
+
+        h1 {
+            // margin: 0px;
+            margin-bottom: 25px;
+            font-size: 56px;
+            line-height: 1.21;
+            color: #333333;
+            font-weight: 700;
+        }
+
+        p {
+            width: 80%;
+            line-height: 1.8;
+            font-size: 16px;
+            font-weight: 400;
+            letter-spacing: 0px;
+            font-style: normal;
+        }
+    }
+}
+
+.biography-image {
+    border-radius: 50%;
+    overflow: hidden;
+    height: 400px;
+    width: 400px;
+}
+
+.image-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
 }
