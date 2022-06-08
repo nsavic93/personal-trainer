@@ -22,6 +22,7 @@ export class AppComponent {
     this.loginService.isLoggedIn.subscribe((data)=>{
       this.isLogged=data
     })
+   
   }
   title = 'personal-trainer';
   faCoffee = faCoffee;
@@ -35,9 +36,24 @@ export class AppComponent {
   mobileNav = false;
   isLogged
   ngOnInit(): void {
-   
+    this.loginService.checkLoginStatus()
   }
-
+  logout(){
+    this.loginService.logout().subscribe()
+    localStorage.removeItem("sid")
+  }
+  logout1(){
+    const promises = [
+      // this.log()
+    ]
+    Promise.all(promises).then(() =>  console.log("AAAAAAAAAAAAA")
+    ).catch((err) => {
+      // console.log(`%c ${err}`, `color: red`);
+    });
+    
+    console.log(localStorage.getItem("sid"));
+    
+  }
   openMobileNav() {
     this.mobileNav = true;
   }

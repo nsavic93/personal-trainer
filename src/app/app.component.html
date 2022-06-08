@@ -24,6 +24,7 @@
       <a routerLink="/about">About</a>
       <a routerLink="/contact">Contact</a>
       <a routerLink="/login" *ngIf="!isLogged">Login</a>
+      <a href="" (click)="logout()" *ngIf="isLogged">Log out</a>
     </div>
     <div class="nav-bar-links">
       <div class="nav-bar-links-item">

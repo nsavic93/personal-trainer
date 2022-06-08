@@ -17,7 +17,7 @@ export class LoginComponent implements OnInit {
       
       if (data.msg === 'OK') {
         this.loginService.setIsLoggedIn(true);
-        
+        localStorage.setItem('sid',data.sid);
       }
       this.loginService.isLoggedIn.subscribe((data) => {
         console.log(data);
