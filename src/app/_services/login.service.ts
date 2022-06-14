@@ -21,7 +21,17 @@ export class LoginService {
     this.setIsLoggedIn(false);
     this.checkLoginStatus()
   }
-
+  checkIsLoggedIn() {
+    return this.httpClient
+      .post<any>(`${this.nodeApiUrl}/api/isLoggedIn`, {
+        sid: localStorage.getItem('sid'),
+        headers: new HttpHeaders({
+          'Content-Type': 'application/json',
+          //'auth-token': this.getToken()
+        }),
+      })
+      .pipe(catchError(this.handleError));
+  }
   login(username, password): Observable<any> {
     return this.httpClient
       .post<any>(`${this.nodeApiUrl}/api/login`, {
@@ -60,8 +70,8 @@ export class LoginService {
         }
       });
   }
-logout(){
- return this.httpClient
+  logout() {
+    return this.httpClient
       .post<any>(`${this.nodeApiUrl}/api/logOut`, {
         sid: localStorage.getItem('sid'),
         headers: new HttpHeaders({
@@ -70,7 +80,7 @@ logout(){
         }),
       })
       .pipe(catchError(this.handleError))
-}
+  }
   handleError(errorResponse: HttpErrorResponse) {
     if (errorResponse.error instanceof ErrorEvent) {
       console.error('Client Side Error :', errorResponse.error.message);
